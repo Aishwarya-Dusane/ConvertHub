@@ -7,7 +7,6 @@ const pages = {
   EMI_CALCULATOR: "/EMICalculator",
   JSON_FORMATTER: "/JsonFormatter",
   XML_FORMATTER: "/xmlFormatter",
-  ROI_Loans: "/roiLoans",
-  ToDoList: "/todolist"
+  ToDoList: "/todolist",
 };
 export default pages;
