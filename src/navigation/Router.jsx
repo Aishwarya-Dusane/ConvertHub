@@ -9,12 +9,8 @@ import GratuityCalculator from "../Components/Calculators_SubComponent/GratuityC
 import EMICalculator from "../Components/Calculators_SubComponent/EMICalculator";
 import JsonFormatter from "../Components/Calculators_SubComponent/JsonFormatter";
 import XmlFormatter from "../Components/Calculators_SubComponent/XmlFormatter";
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
 import ToDoList from "../Components/Calculators_SubComponent/ToDoList";
-
-const ROI_Loans = lazy(() =>
-  import("../Components/Calculators_SubComponent/ROILoans")
-);
 
 function Router() {
   return (
@@ -51,11 +47,6 @@ function Router() {
         <Routes>
           <Route path={pages.XML_FORMATTER} element={<XmlFormatter />} />
         </Routes>
-
-        <Routes>
-          <Route path={pages.ROI_Loans} element={<ROI_Loans />} />
-        </Routes>
-
         <Routes>
           <Route path={pages.ToDoList} element={<ToDoList />} />
         </Routes>
