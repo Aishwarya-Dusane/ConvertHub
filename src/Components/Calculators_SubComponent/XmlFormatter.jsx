@@ -20,13 +20,14 @@ const XMLFormatter = () => {
       style={{ alignContent: "flex-start", margin: "24px 0 0 24px" }}
     >
       <div style={{ display: "flex" }}>
-        <h4 style={{ padding: "12px", width: "40%" }}>JSON Formatter</h4>
+        <h4 style={{ padding: "12px", width: "40%" }}>XML Formatter</h4>
         <StyleDiv style={{ textAlignLast: "right" }}>
           <StyleButton
             onClick={() => {
               setInputXML("");
               setFormattedXML("");
             }}
+            title="Reset Input box"
           >
             Reset
           </StyleButton>
@@ -35,20 +36,21 @@ const XMLFormatter = () => {
           </StyleButton>
         </StyleDiv>
       </div>
-      <h2>XML Formatter</h2>
+
       <div className="row">
         <div className="col-sm" style={{ paddingLeft: "0" }}>
+          <h3>XML Formatter</h3>
           <textarea
-            rows="15"
+            rows="14"
             style={{ width: "100%" }}
             placeholder="Paste your XML here..."
             value={inputXML}
             onChange={(e) => setInputXML(e.target.value)}
-          />
-        </div>
-        <br />
+          />{" "}
+        </div>{" "}
+        <br />{" "}
         <div className="col-sm" style={{ paddingLeft: "0" }}>
-          <h3>Formatted Output:</h3>
+          <h3>Formatted Output:</h3>{" "}
           <pre
             style={{
               padding: "10px",
@@ -56,7 +58,7 @@ const XMLFormatter = () => {
               fontFamily: "monospace",
               border: "1px Solid",
               overflow: "scroll",
-              height: "330px",
+              height: "340px",
             }}
           >
             {formattedXML}

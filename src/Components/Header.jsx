@@ -6,11 +6,11 @@ import pages from "../navigation/pages";
 
 const Wrapper = styled.section`
   display: flex;
+  font-size: 50px;
+  font-weight: bolder;
   color: #ffffff;
   background: linear-gradient(180deg, #00bfff 0%, #2a52be 100%);
   padding: 10px 0 10px 40px;
-  font-size: 50px;
-  font-weight: bolder;
 `;
 
 const StyledButton2 = styled(StyleButton)`
@@ -20,19 +20,28 @@ const StyledButton2 = styled(StyleButton)`
   max-width: max-content;
   padding: 4px;
 `;
+
+const StyledTransparentButton = styled.button`
+  background-color: transparent;
+  border: none;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #ffffff;
+`;
 const Header = () => {
   const navigate = useNavigate();
   return (
     <>
       <Wrapper className="HeaderTitle">
         <div style={{ display: "flex", width: "90%" }}>
-          <>ConvertHub</>
+          <StyledTransparentButton>ConvertHub</StyledTransparentButton>
         </div>
         <div style={{}}>
           <StyledButton2
             onClick={() => {
               navigate(pages.HOME);
             }}
+            title="Back to main Menu"
           >
             Menu
           </StyledButton2>
