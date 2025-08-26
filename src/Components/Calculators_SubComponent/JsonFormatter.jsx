@@ -27,27 +27,33 @@ const JsonFormatter = () => {
       className="container"
       style={{ alignContent: "flex-start", margin: "24px 0 0 24px" }}
     >
-      <div style={{ display: "flex" }}>
-        <h4 style={{ padding: "12px", width: "40%" }}>JSON Formatter</h4>
-        <StyleDiv style={{ textAlignLast: "right" }}>
-          <StyleButton
-            onClick={() => {
-              setJsonInput("");
-              setFormattedJson("");
-            }}
-          >
-            Reset
-          </StyleButton>
-        </StyleDiv>
+      <div className="row">
+        <div className="col-md-6" style={{ paddingLeft: "0" }}>
+          <h4>JSON Formatter</h4>
+        </div>
+        <div className="col-md-6" style={{ paddingLeft: "0" }}>
+          <StyleDiv style={{ width: "100%", textAlign: "right" }}>
+            <StyleButton
+              onClick={() => {
+                setJsonInput("");
+                setFormattedJson("");
+              }}
+              title="Reset Input box"
+            >
+              Reset
+            </StyleButton>
+          </StyleDiv>
+        </div>
       </div>
 
       <div className="row">
         <div className="col-sm" style={{ paddingLeft: "0" }}>
+          <h4>Paste your text</h4>
           <textarea
             value={jsonInput}
             onChange={handleInputChange}
             placeholder="Paste your JSON here..."
-            rows="15"
+            rows="14"
             cols="80"
             style={{ width: "100%", fontFamily: "monospace" }}
           />
@@ -62,7 +68,7 @@ const JsonFormatter = () => {
               fontFamily: "monospace",
               border: "1px Solid",
               overflow: "scroll",
-              height: "330px",
+              height: "340px",
             }}
           >
             {formattedJson}
